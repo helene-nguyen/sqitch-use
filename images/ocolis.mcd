@@ -1,0 +1,6 @@
+ADRESSE: référence interne, nom, ligne principale, complément, code postal, ville
+envoie, 0N ADRESSE, 11 COLIS
+COLIS: numéro interne, contenu, poids, volume, valeur estimée
+
+:
+reçoit, 0N ADRESSE, 11 COLIS

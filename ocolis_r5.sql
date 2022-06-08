@@ -1,0 +1,12 @@
+BEGIN;
+
+ALTER TABLE "package"
+ADD "request_time" TIMESTAMPTZ NOT NULL DEFAULT NOW();
+
+ALTER TABLE "package"
+ADD "expedition_time" TIMESTAMPTZ DEFAULT NOW();
+
+ALTER TABLE "package"
+ADD "delivered_time" TIMESTAMPTZ DEFAULT NOW();
+
+COMMIT;

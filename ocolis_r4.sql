@@ -1,0 +1,12 @@
+BEGIN;
+
+ALTER TABLE "package"
+RENAME COLUMN "volume" TO "height";
+
+ALTER TABLE "package"
+ADD "width" INT NOT NULL DEFAULT 1;
+
+ALTER TABLE "package"
+ADD "depth" INT NOT NULL DEFAULT 1;
+
+COMMIT;
