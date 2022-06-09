@@ -1,12 +1,12 @@
 BEGIN;
 
-ALTER TABLE "package"
+ALTER TABLE IF EXISTS "package"
 ADD "request_time" TIMESTAMPTZ NOT NULL DEFAULT NOW();
 
-ALTER TABLE "package"
-ADD "expedition_time" TIMESTAMPTZ DEFAULT NOW();
+ALTER TABLE IF EXISTS "package"
+ADD "expedition_time" TIMESTAMPTZ;
 
-ALTER TABLE "package"
-ADD "delivered_time" TIMESTAMPTZ DEFAULT NOW();
+ALTER TABLE IF EXISTS "package"
+ADD "delivered_time" TIMESTAMPTZ;
 
 COMMIT;
