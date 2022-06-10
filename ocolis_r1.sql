@@ -1,8 +1,8 @@
 BEGIN;
 -- faire place nette avant de créer les tables
-DROP TABLE IF EXISTS place, package;
+DROP TABLE IF EXISTS "place", "package";
 
-CREATE TABLE place (
+CREATE TABLE "place" (
     id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     reference text NOT NULL UNIQUE,
     name text NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE place (
     city text NOT NULL
 );
 
-CREATE TABLE package (
+CREATE TABLE "package" (
     id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     serial_number int NOT NULL,
     content_description text NOT NULL,

@@ -51,3 +51,28 @@ Contraintes de clés étrangères :
     "package_sender_id_fkey" FOREIGN KEY (sender_id) REFERENCES place(id)
 
 ```
+
+## ADD DELIVERER
+
+### MCD
+
+![mcd-v2](./images/mcd-v2.png)
+
+```
+belongs to, 01 PACKAGE, 0N VEHICLE
+PACKAGE: code_package, serial_number, content_description, weight, height, width, depth, worth, request_time, expedition_time, delivered_time
+send, 0N PLACE, 11 PACKAGE
+
+VEHICLE: code_vehicle, driver_name, vehicle_plate, starting_time, ending_time
+receive, 0N PLACE, 11 PACKAGE
+PLACE: code_place, reference, name, address, additionnal, postal_code, city
+```
+
+### MLD - V2
+
+```
+PACKAGE ( code_package, serial_number, content_description, weight, height, width, depth, worth, request_time, expedition_time, delivered_time, code_place, code_vehicle, code_place.1 )
+VEHICLE ( code_vehicle, driver_name, vehicle_plate, starting_time, ending_time )
+PLACE ( code_place, reference, name, address, additionnal, postal_code, city )
+```
+
