@@ -6,6 +6,6 @@ SET "starting_time" = (SELECT DISTINCT "expedition_time"
 FROM "package" AS p WHERE p.id = v.package_id );
 
 ALTER TABLE "package"
-DROP COLUMN "expedition_time"
+DROP COLUMN "expedition_time";
 
 COMMIT;
