@@ -1,8 +1,8 @@
 #Define environment variables
 
-export PGPASSWORD=ocolis
-export PGUSER=ocolis
-export PGDATABASE=ocolis
+# export PGPASSWORD=ocolis
+# export PGUSER=ocolis
+# export PGDATABASE=ocolis
 
 #Create script
 psql -f ocolis_r0.sql
