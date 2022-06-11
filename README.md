@@ -37,7 +37,7 @@ sqitch plan -f short --no-headers
 
 Result 
 
-![[sq 3.png]]
+![initialization](./__images/sq.PNG)
 
 Custom message commit
 
@@ -54,9 +54,12 @@ Title of commits Sqitch
 2022-06-11 08:52:24 +0200 First version
 ```
 
+### 2. Deployment Version 1
 
+`deploy` : Create tables
+`revert` : Drop tables
+`verify` : Check if ok
 
-###
 ###
 ###
 ###

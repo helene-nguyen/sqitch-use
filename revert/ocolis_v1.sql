@@ -1,7 +1,7 @@
--- Revert ocolis:ocolis_v1 from pg
+-- Revert ocolis_sqitch:ocolis_v1 from pg
 
 BEGIN;
 
--- XXX Add DDLs here.
+DROP TABLE "place","package";
 
 COMMIT;

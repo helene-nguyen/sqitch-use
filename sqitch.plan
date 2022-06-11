@@ -1,5 +1,5 @@
 %syntax-version=1.0.0
-%project=ocolis
-%uri=https://github.com/helene-nguyen/sqitch-use
+%project=ocolis_sqitch
 
-ocolis_v1 2022-06-11T07:59:09Z Yumicode <helene.dyn.nguyen@gmail.com> # First version
+ocolis_v1 2022-06-11T14:28:01Z Yumicode <helene.dyn.nguyen@gmail.com> # Initialisation : First version
+ocolis_v2 2022-06-11T14:34:23Z Yumicode <helene.dyn.nguyen@gmail.com> # Version 2 - Modify table serial_number

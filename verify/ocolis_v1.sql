@@ -1,7 +1,8 @@
--- Verify ocolis:ocolis_v1 on pg
+-- Verify ocolis_sqitch:ocolis_v1 on pg
 
 BEGIN;
 
--- XXX Add verifications here.
+SELECT "id" FROM "place";
+SELECT "id" FROM "package";
 
 ROLLBACK;

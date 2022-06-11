@@ -1,17 +1,27 @@
-# Launch from postgres and define temporarely an environment variable
+#~ Création d'un script via les commandes POSTGRES
+# https://docs.postgresql.fr/10/reference-client.html
+
+#& 0. je prends l'identité de postgres (si non config sur les variables d'env.)
+# On utilise cette commande pour facilité les futurs utilisateurs en parametrant directement le PGUSER en postgres
 export PGUSER=postgres
 
-# Create user in DB
-# -W force to ask password to DB but if in pg_hba.conf is in 'trust', no need to put any password
-# -P open console to create password
-createuser -l -P ocolis 
+#& 1 - Création d'un utilisateur en BDD (with login)
+# createuser [option_connexion...] [option...] [nom_utilisateur]
+# createuser à la même fonction que CREATE ROLE
+# le -W force une demande de mdp, même si celle-ci n'en contient pas
+# le -P demande à l'utilisateur de crée un password pour le nouvelle utilisateur
+createuser -l -P ocolis
+# Reviens à faire : createuser --login --password --pwprompt ocolis
 
-# Create DB
+#& 2 - Création d'une BDD ainsi que le propriétaire
+# createdb [option_connexion...] [option...] [nombase] [description]
 createdb -O ocolis ocolis
+# Reviens à faire : createdb --owner=ocolis ocolis
 
-# Initialize Sqitch with postgres
-sqitch init ocolis --uri https://github.com/helene-nguyen/sqitch-use --engine pg
+#& 3 - Initialiser Sqitch
+# on indique le nom et le moteur utilisé (ici postgres) 
+# + possibilité d'indiqué un chemin avec --uri https://github.com/hello/
+sqitch init ocolis_sqitch --engine pg
 
-# Starter commit change
-sqitch add ocolis_v1 -n 'First version'
-
+#& 4 - Création d'une version 1 pour la BDD
+sqitch add ocolis_v1 -n "Initialisation : First version"
