@@ -1,0 +1,5 @@
+%syntax-version=1.0.0
+%project=ocolis
+%uri=https://github.com/helene-nguyen/sqitch-use
+
+ocolis_v1 2022-06-11T06:52:24Z Yumicode <helene.dyn.nguyen@gmail.com> # First version
