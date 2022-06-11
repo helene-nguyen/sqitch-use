@@ -21,6 +21,41 @@ sqitch add ocolis_v1 -n 'First version'
 ```
 Source [Postgres](https://docs.postgresql.fr/10/app-createuser.html)
 
+Launch the file in bash
+
+```sh
+sh ./init.sh
+```
+
+Or create an alias in .bashrc
+
+Once init, you can #checkSQITCH if everything is ok and if you well have your init
+
+```sh
+sqitch plan -f short --no-headers
+```
+
+Result 
+
+![[sq 3.png]]
+
+Custom message commit
+
+```sh
+sqitch plan -f format:'Title of commits Sqitch '%v%{date}p' 
+'%s
+```
+
+```sh
+# Project: ocolis
+# File:    sqitch.plan
+
+Title of commits Sqitch
+2022-06-11 08:52:24 +0200 First version
+```
+
+
+
 ###
 ###
 ###
